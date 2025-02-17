@@ -1,0 +1,20 @@
+#d1
+exec vscodium
+exec alacritty
+
+#d2
+exec firefox
+
+#d3
+exec telegram-desktop 
+
+#d4
+exec spotify-launcher
+
+###
+
+assign [class="firefox"] → number 2
+
+assign [instance="telegram-desktop"] → number 3
+
+assign [window_role="spotify"] → number 4

@@ -1,0 +1,55 @@
+# i3 config file (v4)
+
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+font pango:DejaVu Sans Mono 8
+
+exec --no-startup-id dex --autostart --environment i3
+
+exec_always "setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:win_space_toggle"
+bindsym Print exec maim -s -u | xclip -selection clipboard -t image/png -i
+
+
+# Transparency with picom compositor
+exec_always picom -f
+exec_always i3-autolayout autolayout
+
+#wallpaper via nitrogen
+exec --no-startup-id nitrogen --restore
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+
+include pacontrol
+
+floating_modifier $mod
+
+tiling_drag modifier titlebar
+
+bindsym $mod+Return exec alacritty
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+Shift+d exec "rofi -show run"
+bindsym $mod+Tab exec "rofi -show window"
+
+include windows
+
+
+include workspaces
+
+include autostart
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+include resize
+
+include gaps
+
+exec ./.config/polybar/launch.sh --forest
