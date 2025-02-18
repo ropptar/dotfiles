@@ -11,7 +11,7 @@ bindsym Print exec maim -s -u | xclip -selection clipboard -t image/png -i
 exec_always ./.config/polybar/launch.sh --forest
 
 
-exec_always picom --config .config/picom/picom.conf --vsync --xrender-sync-fence
+exec_always picom --backend glx --config ~/.config/picom/picom.conf --vsync --xrender-sync-fence
 exec_always i3-autolayout autolayout
 
 exec --no-startup-id nitrogen --restore
