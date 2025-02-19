@@ -16,8 +16,8 @@ exec_always i3-autolayout autolayout
 
 exec --no-startup-id nitrogen --restore
 
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-bindsym $mod+Ctrl+l exec i3lock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur
+bindsym $mod+Ctrl+l exec betterlockscreen -l blur
 
 include pacontrol
 
