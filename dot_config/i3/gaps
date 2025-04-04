@@ -1,0 +1,5 @@
+gaps inner 10px
+gaps outer 10px
+smart_gaps on
+
+#for_window [class="Alacritty"] gaps inner 10, gaps outer 10
