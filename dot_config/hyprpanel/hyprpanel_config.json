@@ -1,0 +1,74 @@
+{
+  "theme.font.name": "Hack Nerd Font",
+  "theme.font.label": "Hack Nerd Font",
+  "theme.font.size": "1rem",
+  "theme.font.weight": 600,
+  "theme.bar.menus.enableShadow": false,
+  "scalingPriority": "gdk",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "systray",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.volume.raiseMaximumVolume": false,
+  "menus.clock.time.military": true,
+  "menus.clock.time.hideSeconds": false,
+  "menus.clock.weather.enabled": false,
+  "theme.bar.menus.menu.dashboard.profile.size": "5.5em",
+  "theme.bar.menus.menu.dashboard.scaling": 85,
+  "theme.bar.menus.popover.scaling": 60,
+  "theme.bar.scaling": 100,
+  "theme.osd.scaling": 100,
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Steam",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "steam",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.directories.left.directory1.label": "󰉍 /dwnlds",
+  "menus.dashboard.directories.left.directory1.command": "bash -c \"xdg-open $HOME/dwnlds/\"",
+  "menus.dashboard.directories.left.directory2.command": "bash -c \"xdg-open $HOME/vids/\"",
+  "menus.dashboard.directories.left.directory2.label": "󰉏 /vids"
+}
