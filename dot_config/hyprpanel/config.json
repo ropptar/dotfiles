@@ -402,8 +402,8 @@
   "menus.clock.time.military": true,
   "menus.clock.time.hideSeconds": false,
   "menus.clock.weather.enabled": false,
-  "theme.bar.menus.menu.dashboard.profile.size": "5.5em",
-  "theme.bar.menus.menu.dashboard.scaling": 85,
+  "theme.bar.menus.menu.dashboard.profile.size": "8.5em",
+  "theme.bar.menus.menu.dashboard.scaling": 75,
   "theme.bar.menus.popover.scaling": 80,
   "theme.bar.scaling": 100,
   "theme.osd.scaling": 100,
@@ -428,5 +428,6 @@
   "theme.osd.location": "top",
   "theme.osd.active_monitor": true,
   "theme.bar.menus.menu.clock.scaling": 90,
-  "theme.bar.location": "top"
+  "theme.bar.location": "top",
+  "menus.dashboard.powermenu.avatar.image": "/home/ropptar/pictures/katyuk_monster.png"
 }
