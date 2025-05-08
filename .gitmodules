@@ -1,3 +1,0 @@
-[submodule "nixos-config"]
-	path = nixos-config
-	url = git@github.com:ropptar/nixos-config.git
