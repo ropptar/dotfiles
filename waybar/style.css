@@ -16,33 +16,20 @@
 @define-color orange #fe8019;
 @define-color orange-d #d65d0e;
 
-* {
-    border: none;
-    border-radius: 10px;
-    font-family: Hack Nerd Font Propo;
-    transition: none;
-    min-height: 20px;
-}
 
 window#waybar {
-    color: @fg;
-    padding: 0px 15px;
     background: transparent;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
-}
-
-window#waybar.empty #window {
     opacity: 0;
 }
-
 
 /* global */
 
 #custom-distro,
 #window,
+#submap,
 #workspaces,
 #wireplumber,
 #network,
@@ -50,11 +37,16 @@ window#waybar.empty #window {
 #clock,
 #tray
 {
-    font-size: 16px;
+    font-size: 18px;
     color: @fg;
     background: @bg;   
     padding: 10px;
     margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: Hack Nerd Font Propo;
+    transition: none;
+    min-height: 20px;
 }
 
 /* fix window title collision */
@@ -81,12 +73,18 @@ window#waybar.empty #window {
 /* modules-left */
 
 #custom-distro {
+    font-size: 25px;
+    padding: 0px 9px;
     color: @orange;
-    font-size: 20px;
 }
 
 #window {
 }
+
+#submap {
+    padding: 5px;
+    border: 5px solid @red;
+r
 
 /* modules-center */
 
@@ -95,7 +93,6 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-    font-size: 20px;
     padding: 0px 5px;
 }
 
@@ -103,15 +100,12 @@ window#waybar.empty #window {
     color: @gray;
 }
 
-#workspaces button.visible {
-    color: @blue;
-}
-
 #workspaces button.active {
-    color: @green;
+    color: @orange;
 }
 
 #workspaces button.special {
+    padding-left: 4px;
     color: @blue;
 }
 

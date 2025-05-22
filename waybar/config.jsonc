@@ -34,7 +34,8 @@
 	"rewrite": {
 	    "(.*) (—|-) Mozilla Firefox": "󰈹 $1",
 	    "(.*) (—|-) Zen Browser": "󰈹 $1"
-	}
+	},
+	"name":"shit"
     },
 
     // modules-center
@@ -46,7 +47,12 @@
             "3": "",
             "4": "",
             "5": "",
-	    "special": "",
+	    "6": "󰲪",
+	    "7": "󰲬",
+	    "8": "󰲮",
+	    "9": "󰲰",
+	    "10": "󰿬",
+	    "special": "",
             "urgent": "",
             "focused": "",
             "default": ""
