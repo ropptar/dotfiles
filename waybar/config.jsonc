@@ -20,8 +20,8 @@
         "hyprland/language",
         //"battery",
         "clock",
-        "tray",
-        "group/power"
+        "tray"
+        //"group/power"
     ],
 
     // modules-left
@@ -76,7 +76,7 @@
 	"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"]
     },
     "hyprland/language" : {
-	"format": "<span color=\"#d3869b\"></span> {}",
+	"format": "<span color=\"#d3869b\"></span> {} 󰌌",
 	"format-en": "EN",
 	"format-ru": "RU"
     },
@@ -85,9 +85,9 @@
         "spacing": 10
     },
     "clock": {
+        "format": "<span color=\"#fabd2f\"></span> {:%H:%M} 󰥔",
         "timezone": "Europe/Moscow",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "{:%d %h %Y, %H:%M:%S}"
     },
     "custom/media": {
         "format": "{icon} {text}",
