@@ -1,0 +1,126 @@
+
+@define-color bg #282828;
+@define-color fg #ebdbb2;
+@define-color gray #a89984;
+@define-color red #fb4934;
+@define-color red-d #cc241d;
+@define-color green #b8bb26;
+@define-color green-d #98971a;
+@define-color yellow #fabd2f;
+@define-color yellow-d #d79921;
+@define-color blue #83a598;
+@define-color blue-d #458588;
+@define-color purple #d3869b;
+@define-color purple-d #b16286;
+@define-color aqua #8ec07c;
+@define-color aqua-d #689d6a;
+@define-color orange #fe8019;
+@define-color orange-d #d65d0e;
+
+* {
+    border: none;
+    border-radius: 8px;
+    font-family: Hack Nerd Font Propo;
+    font-size: 16px;
+    transition: none;
+    margin: 2px;
+}
+
+window#waybar {
+    color: @fg;
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* modules-left */
+
+#custom-distro {
+    color: @orange;
+    background: @bg;
+    font-size: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#window {
+  color: @fg;
+  background: @bg;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+/* modules-center */
+
+#workspaces {
+  background: @bg;
+
+  font-size: 36px;
+  border-radius: 10px;
+}
+
+#workspaces button {
+    color: @fg;
+}
+
+#workspaces button.empty {
+    color: @gray;
+}
+
+#workspaces button.visible {
+    color: @blue;
+}
+
+#workspaces button.active
+{
+    color: @green;
+}
+
+#workspaces button.special {
+    color: @blue;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+/* modules-right */
+
+#wireplumber {
+    color: @fg;
+    background: @bg;
+    padding: 10px;
+}
+
+#wireplumber.muted {
+    color: @red;
+}
+
+#network {
+    color: @fg;
+    background: @bg;
+    padding: 10px;
+}
+
+#language {
+    color: @fg;
+    background: @bg;
+    padding: 10px
+}
+
+#clock {
+    color: @fg;
+    background: @bg;
+    padding: 10px
+}
+
+#tray  {
+    color: @fg;
+    background: @bg;
+    padding: 10px
+}
+
