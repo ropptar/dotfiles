@@ -18,11 +18,11 @@
 
 
 window#waybar {
-    background: transparent;
+	background: transparent;
 }
 
 window#waybar.hidden {
-    opacity: 0;
+	opacity: 0;
 }
 
 /* global */
@@ -37,100 +37,82 @@ window#waybar.hidden {
 #clock,
 #tray
 {
-    font-size: 18px;
-    color: @fg;
-    background: @bg;   
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 10px;
-    font-family: Hack Nerd Font Propo;
-    transition: none;
-    min-height: 20px;
+	font-size: 18px;
+	color: @fg;
+	background: @bg;   
+	padding: 10px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 10px;
+	font-family: Hack Nerd Font Propo;
+	transition: none;
+	min-height: 20px;
 }
 
 /* fix window title collision */
 
 .modules-left {
-    margin-right: 15px;
+	margin-right: 15px;
 }
 
 .modules-right {
-    margin-left: 15px;
+	margin-left: 15px;
 }
 
 /* left/rightmost margin*/
 
 .modules-left > widget:first-child > #custom-distro {
-    border: 1px solid @orange;
-    margin-left: 15px;
+	border: 1px solid @orange;
+	margin-left: 15px;
 }
 
 .modules-right > widget:last-child > #tray  {
-    margin-right: 15px;
+	margin-right: 15px;
 }
 
 /* modules-left */
 
 #custom-distro {
-    font-size: 25px;
-    padding: 0px 9px;
-    color: @orange;
-}
-
-#window {
+	font-size: 25px;
+	padding: 0px 9px;
+	color: @orange;
 }
 
 #submap {
-    padding: 5px;
-    border: 5px solid @red;
+	padding: 5px;
+	border: 5px solid @red;
 }
 
 /* modules-center */
 
 #workspaces {
-    font-size: 20px;
-}
-
-#workspaces button {
-    padding: 0px 5px;
+	font-size: 20px;
 }
 
 #workspaces button.empty {
-    color: @gray;
+	color: @gray;
+}
+
+#workspaces button {
+	padding: 0px 5px;
+	color:@fg;
 }
 
 #workspaces button.active {
-    color: @orange;
+	color: @orange;
 }
 
 #workspaces button.special {
-    padding-left: 4px;
-    color: @blue;
+	padding-left: 4px;
+	color: @blue;
 }
 
 #workspaces button.urgent {
-    color: @red;
+	color: @red;
 }
 
 /* modules-right */
 
-#wireplumber {
-}
-
 #wireplumber.muted {
-    color: @red;
+	color: @red;
 }
-
-#network {
-}
-
-#language {
-}
-
-#clock {
-}
-
-#tray  {
-}
-

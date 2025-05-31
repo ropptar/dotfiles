@@ -1,0 +1,91 @@
+
+{
+	"layer": "top",
+    "position": "top",
+    "height": 50,
+    "spacing": 8,
+	"modules-center": [
+	  "hyprland/workspaces"
+	],
+	"modules-left": [
+	  "custom/distro",
+	  "hyprland/window",
+	  "hyprland/submap"
+	],
+	"modules-right": [
+	  "wireplumber",
+	  "network",
+	  "hyprland/language",
+	  "clock",
+	  "tray"
+	],
+	
+	"clock": {
+	  "format": "<span color=\"#fabd2f\"></span> {:%H:%M} 󰥔",
+	  "timezone": "Europe/Moscow",
+	  "tooltip-format": "{:%d %h %Y, %H:%M:%S}"
+	},
+	"custom/distro": {
+	  "exec": "~/.config/waybar/getdistro.sh",
+	  "format": "{}"
+	},
+	"hyprland/language": {
+	  "format": "<span color=\"#d3869b\"></span> {} 󰌌",
+	  "format-en": "EN",
+	  "format-ru": "RU"
+	},
+	"hyprland/window": {
+	  "format": "{}"
+	},
+	"hyprland/workspaces": {
+	  "active-only": false,
+	  "format": "{icon}",
+	  "format-icons": {
+	    "1": "",
+	    "10": "󰿬",
+	    "2": "",
+	    "3": "",
+	    "4": "",
+	    "5": "",
+	    "6": "󰲪",
+	    "7": "󰲬",
+	    "8": "󰲮",
+	    "9": "󰲰",
+	    "default": "",
+	    "focused": "",
+	    "special": "",
+	    "urgent": ""
+	  },
+	  "persistent-workspaces": {
+	    "*": 5
+	  },
+	  "show-special": true,
+	  "special-visible-only": true
+	},
+	"network": {
+	  "format-alt": "<span color=\"#83a598\"></span> {ifname}: {ipaddr}/{cidr}",
+	  "format-disconnected": "<span color=\"#83a598\"></span> No network ",
+	  "format-ethernet": "<span color=\"#83a598\"></span> {ipaddr}/{cidr} ",
+	  "format-icons": [
+	    "󰤟",
+	    "󰤢",
+	    "󰤥",
+	    "󰤨"
+	  ],
+	  "format-linked": "<span color=\"#83a598\"></span> {ifname} (No IP) ",
+	  "format-wifi": "<span color=\"#83a598\"></span> {essid} ({signalStrength}%) {icon}"
+	},
+	"position": "top",
+	"spacing": 8,
+	"tray": {
+	  "icon-size": 16,
+	  "spacing": 10
+	},
+	"wireplumber": {
+	  "format": "<span color=\"#8ec07c\"></span> {volume}% 󰋋",
+	  "format-muted": "<span color=\"#8ec07c\"></span> {volume}% 󰟎",
+	  "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	  "on-click-middle": "pavucontrol"
+	}
+}
+
