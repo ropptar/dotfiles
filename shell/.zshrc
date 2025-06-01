@@ -9,9 +9,14 @@ SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
 # completion
-autoload -U compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' auto-description '%d'
+zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**'
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33
+
+autoload -Uz compinit
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
@@ -57,3 +62,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+

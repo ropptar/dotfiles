@@ -9,3 +9,28 @@ alias grep="grep --color=always"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+#git
+alias g="git"
+alias ga="git add"
+
+alias gb="git branch"
+alias gbd="git branch -d"
+alias gbD="git branch -D"
+
+alias gc="git commit"
+alias gcm="git commit -m"
+
+alias gco="git checkout"
+alias gcb="git checkout -b"
+
+alias gst="git status"
+
+alias gm="git merge"
+alias gmt="git mergetool"
+
+alias gl="git pull"
+alias gp="git push"
+
+alias gsta="git stash"
+alias gstap="git stash pop"

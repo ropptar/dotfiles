@@ -2,7 +2,6 @@ local options = {
 	laststatus = 3,
 	ruler = false, --disable extra numbering
 	showmode = false, --not needed due to lualine
-	showcmd = false,
 	wrap = true, --toggle bound to leader W
 	mouse = "a", --enable mouse
 	clipboard = "unnamedplus", --system clipboard integration
