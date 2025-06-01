@@ -3,6 +3,7 @@ source ~/.config/shell/aliases.sh
 
 # enable colors
 autoload -U colors && colors
+
 # cache history
 HISTSIZE=10000
 SAVEHIST=10000

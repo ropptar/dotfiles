@@ -1,0 +1,6 @@
+[user]
+	email = ropptar@ya.ru
+	name = Alexander L
+[push]
+	default=current
+	autoSetupRemote = true
