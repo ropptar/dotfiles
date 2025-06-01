@@ -3,6 +3,8 @@ source ~/.config/shell/aliases.sh
 
 # enable colors
 autoload -U colors && colors
+LS_COLORS="di=00;34"
+export LS_COLORS
 
 # cache history
 HISTSIZE=10000
@@ -10,14 +12,28 @@ SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
 # completion
-zstyle ':completion:*' auto-description '%d'
 zstyle ':completion:*' completer _complete _ignored
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**'
-zstyle ':completion:*' menu select=1
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+#formatting and colors
+zstyle ':completion:*' menu select
+zstyle ':completion:*' select-prompt %SScrolling: %p%s
+zstyle ':completion:*:*:*:*:descriptions' format '%F{green}-- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} ma=0\;33
 
-autoload -Uz compinit
+#cache results
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "~/.cache/zsh/zcompcache"
+
+#sort results in order
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:*:-command-:*:' group-order \
+	aliases commands functions builtins
+
+setopt AUTO_LIST
+
+autoload -Uz compinit;compinit
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
@@ -30,6 +46,8 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'J' vi-forward-blank-word
+bindkey -M menuselect 'K' vi-backward-blank-word
 
 # cursor shape
 function zle-keymap-select {
@@ -63,4 +81,3 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
