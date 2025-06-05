@@ -14,6 +14,7 @@ Plug('ellisonleao/gruvbox.nvim') -- colorscheme
 Plug('nvim-lualine/lualine.nvim') -- status line
 Plug('nvim-tree/nvim-web-devicons') -- icons
 Plug('folke/which-key.nvim') -- key hints
+Plug('brenoprata10/nvim-highlight-colors') -- inline color highlighting
 
 vim.call('plug#end')
 
@@ -24,3 +25,4 @@ require('options.options')
 
 require('plugins.lualine')
 require('plugins.which-key')
+require('plugins.nvim-highlight-colors')

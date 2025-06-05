@@ -1,14 +1,10 @@
-
 if [ ${ZSH_VERSION} ]; then
-	git_status() {
-		git status > /dev/null 2>&1 && echo "$1$(git branch --show-current)$2 "
+	local git_status() {
+		git status > /dev/null 2>&1 && echo "$1$(git branch --show-current)$2"
 	}
 	precmd() {
-		local LEFT="%F{blue}%n%(!. !.)%f @ %F{red}%m$([ -n "$SSH_CLIENT" ] && echo " !")%f"
-		local LEFTB="in %B%F{green}%~%f%b $(git_status "at %B%F{yellow}" "%f%b")%(!.#.%%) "
-		local RIGHTB="%(?..%F{red}%?%f)"
-		
-		PROMPT=$LEFT$'\n'$LEFTB
+		PROMPT="%B%F{red}[%f%F{yellow}%n%F{green}@%f%F{blue}%m%f:%F{magenta}%~%f%F{red}]%f%b-$(git_status "%B%F{red}[%f%F{yellow}" "%f%F{red}]%f%b-")%B%F{red}[%f%*%F{red}]%f%b"\
+$'\n'"$ "
 		RPROMPT=$RIGHTB
 	}   
 elif [ ${BASH_VERSION} ]; then

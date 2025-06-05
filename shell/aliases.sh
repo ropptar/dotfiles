@@ -13,6 +13,7 @@ alias ....="cd ../../.."
 #git
 alias g="git"
 alias ga="git add"
+alias gcl="git clone"
 
 alias gb="git branch"
 alias gbd="git branch -d"
@@ -28,9 +29,13 @@ alias gst="git status"
 
 alias gm="git merge"
 alias gmt="git mergetool"
+alias gdiff="git diff"
 
 alias gl="git pull"
 alias gp="git push"
 
 alias gsta="git stash"
 alias gstap="git stash pop"
+
+#stuff
+alias mdwm="cd ~/github/dwm; doas make clean install"
