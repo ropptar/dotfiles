@@ -81,3 +81,14 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# ssh agent
+local ssh_agent_pid=/tmp/ssh-agent.pid
+SSH_AUTH_SOCK=/tmp/ssh-agent.sock
+if [ -z "$(pgrep ssh-agent)" ]; then
+	eval $(ssh-agent -s -a $SSH_AUTH_SOCK)
+	echo "ssh-agent invoked: $SSH_AGENT_PID"
+	ssh-add ~/.ssh/git_ed25519
+fi
+export SSH_AGENT_PID
+export SSH_AUTH_SOCK
