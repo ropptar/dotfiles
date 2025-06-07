@@ -1,0 +1,25 @@
+# /dev/sdc3 UUID=0f424412-1c65-4a4e-af44-aead98a45936
+LABEL=ARCH          	/         	ext4      	rw,relatime	0 1
+
+# /dev/sdc1 UUID=A3C3-9DDE
+LABEL=EFI           	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sdc2 UUID=6c179edc-c820-47fe-b38b-4059157e262a
+LABEL=DATA          	/mnt/data 	ext4      	rw,relatime	0 2
+
+/mnt/data/desktop   	/home/ropptar/Desktop	none	rw,bind   	0 0
+
+/mnt/data/documents 	/home/ropptar/Documents	none	rw,bind   	0 0
+
+/mnt/data/downloads 	/home/ropptar/Downloads	none	rw,bind   	0 0
+
+/mnt/data/pictures  	/home/ropptar/Pictures	none	rw,bind   	0 0
+
+/mnt/data/projects  	/home/ropptar/Projects	none	rw,bind   	0 0
+
+/mnt/data/dotfiles  	/home/ropptar/dotfiles	none	rw,bind   	0 0
+
+/mnt/data/videos    	/home/ropptar/Videos	none	rw,bind   	0 0
+
+LABEL=STEAMSSD		/mnt/data/steamssd	ext4	rw,relatime,X-mount.owner=1000,X-mount.group=1000	0 2	
+LABEL=STEAMHDD		/mnt/data/steamhdd	ext4	rw,relatime,X-mount.owner=1000,X-mount.group=1000	0 2	

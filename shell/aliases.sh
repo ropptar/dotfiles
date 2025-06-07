@@ -34,6 +34,9 @@ alias gdiff="git diff"
 alias gl="git pull"
 alias gp="git push"
 
+alias grs="git restore"
+alias grst="git restore --staged"
+
 alias gsta="git stash"
 alias gstap="git stash pop"
 
