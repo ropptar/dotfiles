@@ -86,8 +86,7 @@ eval "$(pyenv init - zsh)"
 local ssh_agent_pid=/tmp/ssh-agent.pid
 SSH_AUTH_SOCK=/tmp/ssh-agent.sock
 if [ -z "$(pgrep ssh-agent)" ]; then
-	eval $(ssh-agent -s -a $SSH_AUTH_SOCK)
-	echo "ssh-agent invoked: $SSH_AGENT_PID"
+	eval $(ssh-agent -s -a $SSH_AUTH_SOCK) > /dev/null && echo "ssh-agent invoked: $SSH_AGENT_PID"
 	ssh-add ~/.ssh/git_ed25519
 fi
 export SSH_AGENT_PID
