@@ -46,4 +46,6 @@ if [ -d "$xinitdir"/xinitrc.d ] ; then
 	unset f
 fi
 
+feh --bg-fill ~/dotfiles/wallpapers/art/cardsharps.jpg &
+picom &
 exec dwm
