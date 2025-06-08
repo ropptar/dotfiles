@@ -48,4 +48,5 @@ fi
 
 feh --bg-fill ~/dotfiles/wallpapers/art/cardsharps.jpg &
 picom &
+setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:win_space_toggle
 exec dwm

@@ -73,10 +73,6 @@ preexec() { echo -ne '\e[5 q' ;}
 # PS1
 source ~/.config/shell/prompt.sh
 
-# plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 #pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -91,3 +87,6 @@ if [ -z "$(pgrep ssh-agent)" ]; then
 fi
 export SSH_AGENT_PID
 export SSH_AUTH_SOCK
+
+# plugins
+source ~/.zsh/plugins/*/*.zsh
