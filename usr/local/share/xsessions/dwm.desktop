@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Exec=/home/ropptar/scripts/startdwm.sh
+Icon=dwm
+Type=XSession
