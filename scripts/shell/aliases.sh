@@ -9,6 +9,7 @@ alias grep="grep --color=always"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias ff="fastfetch"
 
 #git
 alias g="git"
