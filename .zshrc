@@ -1,5 +1,5 @@
 # aliases
-source ~/.config/shell/aliases.sh
+source ~/scripts/shell/aliases.sh
 
 # enable colors
 autoload -U colors && colors
@@ -71,7 +71,7 @@ echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;}
 
 # PS1
-source ~/.config/shell/prompt.sh
+source ~/scripts/shell/prompt.sh
 
 #pyenv
 export PYENV_ROOT="$HOME/.pyenv"
