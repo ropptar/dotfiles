@@ -6,8 +6,10 @@ setxkbmap us,ru -option 'grp:win_space_toggle'
 picom --backend=glx &
 
 #autostart apps
-local function crank() {
-	if [ -z "$(pgrep $1)" ]; then exec $1 &; fi
+function crank() {
+	if [ -z "$(pgrep $1)" ]; then
+		exec $1 &
+	fi
 }
 crank librewolf
 crank telegram-desktop
