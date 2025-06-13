@@ -11,11 +11,12 @@ function linker() {
 if [[ $(pwd) =~ "dotfiles" ]]; then
 	linker .*rc scripts .zsh ~
 	linker wallpapers ~/Pictures
-	linker .config/* ~/.config
+	linker .config/* ~/.config/
 	linker scripts/startdwm.sh ~/.xinitrc
+	cp .gitconfig ~
 
 	doas cp -r etc/* /etc
-	sudo chmod 0400 /etc/doas.conf
+	doas chmod 0400 /etc/doas.conf
 
 	doas cp usr/local/share/xsessions/dwm.desktop /usr/local/share/xsessions/dwm.desktop
 else

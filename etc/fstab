@@ -21,5 +21,7 @@ LABEL=DATA          	/mnt/data 	ext4      	rw,relatime	0 2
 
 /mnt/data/videos    	/home/ropptar/Videos	none	rw,bind   	0 0
 
+/mnt/data/.ssh			/home/ropptar/.ssh		none	rw,bind   	0 0
+
 LABEL=STEAMSSD		/mnt/data/steamssd	ext4	rw,relatime,X-mount.owner=1000,X-mount.group=1000	0 2	
 LABEL=STEAMHDD		/mnt/data/steamhdd	ext4	rw,relatime,X-mount.owner=1000,X-mount.group=1000	0 2	

@@ -1,5 +1,6 @@
 alias c="clear"
 alias v="nvim"
+alias vnrc="nvim -u /dev/null"
 alias resh="source ~/.$(ps -p $$ -o 'comm=')rc"
 local LSARGS="--color=always --group-directories-first"
 alias ls="ls $LSARGS"
@@ -37,9 +38,10 @@ alias gp="git push"
 
 alias grs="git restore"
 alias grst="git restore --staged"
+alias grm="git rm"
 
 alias gsta="git stash"
 alias gstap="git stash pop"
 
 #stuff
-alias mdwm="cd ~/github/dwm; doas make clean install"
+alias dmci="doas make clean install"
