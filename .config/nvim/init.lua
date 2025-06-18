@@ -15,7 +15,8 @@ Plug('nvim-lualine/lualine.nvim') -- status line
 Plug('nvim-tree/nvim-web-devicons') -- icons
 Plug('folke/which-key.nvim') -- key hints
 Plug('brenoprata10/nvim-highlight-colors') -- inline color highlighting
-
+Plug('neovim/nvim-lspconfig') -- LSP manager
+Plug('ms-jpq/coq_nvim') -- completion
 vim.call('plug#end')
 
 vim.cmd('colorscheme gruvbox')
@@ -26,3 +27,5 @@ require('options.options')
 require('plugins.lualine')
 require('plugins.which-key')
 require('plugins.nvim-highlight-colors')
+require('plugins.lspconfig')
+require('plugins.coq')

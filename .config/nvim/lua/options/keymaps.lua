@@ -5,4 +5,4 @@ end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-map("n", "<leader>E", vim.cmd.Ex, { desc = "Open netrw" })
+map("n", "<leader>cd", vim.cmd.Ex, { desc = "Open netrw" })

@@ -19,6 +19,9 @@ if [[ $(pwd) =~ "dotfiles" ]]; then
 	doas chmod 0400 /etc/doas.conf
 
 	doas cp usr/local/share/xsessions/dwm.desktop /usr/local/share/xsessions/dwm.desktop
+
+	gsettings set org.gnome.desktop.interface font-name 'Hack Nerd Font 12'
+	gsettings set org.gnome.desktop.interface monospace-font-name 'Hack Nerd Font Mono 12'
 else
 	echo "wrong directory mate";
 fi
