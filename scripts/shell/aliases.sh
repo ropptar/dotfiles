@@ -7,11 +7,6 @@ alias ls="ls $LSARGS"
 alias la="ls -lAh --color=always"
 alias ll="ls -lh --color=always"
 alias grep="grep --color=always"
-#include <string>
-alias gpp="g++"
-function finds(){
-	find $@ -printf "%P\n" # strip ./ from results (for gitignore etc)
-}
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -40,21 +35,13 @@ alias gdiff="git diff"
 
 alias gl="git pull"
 alias gp="git push"
-alias gpau="git push --all --set-upstream"
 
 alias grs="git restore"
 alias grst="git restore --staged"
 alias grm="git rm"
-alias grm="git rm --cached"
-
-alias gres="git reset"
-alias gresh="git reset --hard"
-alias greshh="git reset --hard HEAD"
 
 alias gsta="git stash"
 alias gstap="git stash pop"
 
 #stuff
 alias dmci="doas make clean install"
-alias vs="nvim ~/scripts/"
-alias rmslug="rm *orig; rm *rej"
