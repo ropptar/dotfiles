@@ -36,6 +36,12 @@ alias gdiff="git diff"
 alias gl="git pull"
 alias gp="git push"
 
+alias grem="git remote"
+
+alias gres="git reset"
+alias gresh="git reset --hard"
+alias greshh="git reset --hard HEAD"
+
 alias grs="git restore"
 alias grst="git restore --staged"
 alias grm="git rm"
