@@ -1,0 +1,5 @@
+cpu="$(sensors | awk '/^Package/ {print $4}' | cut -c 2-5)°c"
+load="$[100-$(vmstat 1 2|tail -1|awk '{print $15}')]%"
+mem="$(free -h | awk '/Mem/ {print $3}')"
+percent="$(free -m | awk '/^Mem/ {print int($3/$2*100)}')%"
+echo "$cpu/$load $mem/$percent"

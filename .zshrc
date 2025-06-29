@@ -90,3 +90,4 @@ export SSH_AUTH_SOCK
 
 # plugins
 source ~/.zsh/plugins/*/*.zsh
+eval $(thefuck --alias)

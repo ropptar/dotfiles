@@ -14,6 +14,7 @@ function crank() {
 crank librewolf
 crank telegram-desktop
 crank spotify
+crank dwmblocks
 
 #write pid
 echo $$ > /tmp/dwm.pid
