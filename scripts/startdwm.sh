@@ -16,6 +16,10 @@ crank telegram-desktop
 crank spotify
 crank dwmblocks
 
+#monitor settings
+xrandr --output HDMI-0 --mode 1920x1080
+xrandr --output HDMI-1 --auto --same-as HDMI-0 --mode 1920x1080
+
 #write pid
 echo $$ > /tmp/dwm.pid
 

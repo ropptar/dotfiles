@@ -2,4 +2,8 @@
 
 kb="$(xkb-switch)"
 
+if [ "$(xset -q | awk '/Caps Lock/ {print $4}')" = "on" ]; then
+	kb="$(echo $kb | tr '[:lower:]' '[:upper:]')"
+fi
+
 echo $kb
